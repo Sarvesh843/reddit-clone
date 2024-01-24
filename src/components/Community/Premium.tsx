@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Icon, Text, Stack, Button } from "@chakra-ui/react";
+import { Flex, Icon, Text, Stack, Button, Link, Box } from "@chakra-ui/react";
 import { GiCheckedShield } from "react-icons/gi";
 
 const Premium: React.FC = () => {
@@ -20,9 +20,12 @@ const Premium: React.FC = () => {
           <Text>The best Reddit experience, with monthly Coins</Text>
         </Stack>
       </Flex>
-      <Button height="30px" bg="brand.100">
-        Try Now
-      </Button>
+
+      <Link href={"/r/premium"}>
+        <Button height="30px" bg="brand.100" width={"100%"}>
+          Try Now
+        </Button>
+      </Link>
     </Flex>
   );
 };

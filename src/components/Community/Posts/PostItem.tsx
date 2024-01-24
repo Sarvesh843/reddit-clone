@@ -150,10 +150,10 @@ const PostItem: React.FC<PostItemProps> = ({
                 <Icon as={BsDot} color="gray.500" fontSize={8} />
               </>
             )}
-            <Text>
+            {post.createdAt && (<Text>
               Posted by u/{post.creatorDisplayName}{" "}
               {moment(new Date(post.createdAt.seconds * 1000)).fromNow()}
-            </Text>
+            </Text>)}
           </Stack>
           <Text fontSize="12pt" fontWeight={600}>
             {post.title}

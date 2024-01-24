@@ -152,11 +152,13 @@ const Recommendations: React.FC = () => {
                 </Link>
               );
             })}
+            <Link href={"/r/communitypage"}>
             <Box p="10px 20px">
               <Button height="30px" width="100%">
                 View All
               </Button>
             </Box>
+            </Link>
           </>
         )}
       </Flex>

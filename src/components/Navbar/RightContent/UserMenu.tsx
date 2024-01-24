@@ -9,6 +9,7 @@ import {
   Flex,
   Text,
   MenuDivider,
+  Link,
 } from "@chakra-ui/react";
 import { User, signOut } from "firebase/auth";
 import React from "react";
@@ -77,16 +78,18 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
       <MenuList>
         {user ? (
           <>
-            <MenuItem
-              fontSize="10pt"
-              fontWeight={700}
-              _hover={{ bg: "blue.500", color: "white" }}
-            >
-              <Flex align="center">
-                <Icon as={CgProfile} fontSize={20} mr={2} />
-                Profile
-              </Flex>
-            </MenuItem>
+            <Link href="/r/profile">
+              <MenuItem
+                fontSize="10pt"
+                fontWeight={700}
+                _hover={{ bg: "blue.500", color: "white" }}
+              >
+                <Flex align="center">
+                  <Icon as={CgProfile} fontSize={20} mr={2} />
+                  Profile
+                </Flex>
+              </MenuItem>
+            </Link>
             <MenuDivider />
             <MenuItem
               fontSize="10pt"
